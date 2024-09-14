@@ -1,0 +1,36 @@
+/* 기본적으로 모달과 오버레이는 숨김 상태 */
+.modal-overlay {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s; /* opacity는 서서히 변화, visibility는 딜레이 */
+}
+
+/* 모달 창의 스타일 */
+.modal-content {
+    background-color: #202020;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+}
+.modal-content .para {
+    text-align: left;
+}
+
+/* 모달 활성화 시 */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s; /* 모달이 활성화되면 visibility 즉시 visible */
+}

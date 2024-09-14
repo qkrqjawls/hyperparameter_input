@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperparameter</title>
+    <link rel="stylesheet" href="dropdown.css" />
+</head>
+<body bgcolor="black">
+    <div class="container-container">
+        <button id="global_submit">SUBMIT</button>
+        <button class="help-button" data-box="0" id="global_help">도움말</button>
+        <div class="image-container">
+            <img src="code_sample_img.png" />
+            <!-- 박스들 -->
+            <div class="overlay1-box box" data-box="1">?</div>
+            <div class="overlay2-box box" data-box="2">?</div>
+            <div class="overlay3-box box" data-box="3">?</div>
+            <div class="overlay4-box box" data-box="4">?</div>
+            <div class="overlay5-box box" data-box="5">?</div>
+            <div class="overlay6-box box" data-box="6">?</div>
+            <div class="overlay7-box box" data-box="7">?</div>
+            <div class="overlay8-box box" data-box="8">?</div>
+            <div class="overlay9-box box" data-box="9">?</div>
+            <div class="overlay10-box box" data-box="10">?</div>
+            <div class="overlay11-box box" data-box="11">?</div>
+            <div class="overlay12-box box" data-box="12">?</div>
+            <div class="overlay13-box box" data-box="13">?</div>
+            <div class="overlay14-box box" data-box="14">?</div>
+        </div>
+    </div>
+
+    <!-- 설명과 선택지가 나타날 영역 -->
+    <div class="info-box" id="infoBox1">
+        <p>filters1:</p>
+        <div class="choices">
+            <button class="choice" data-value="8">8</button>
+            <button class="choice" data-value="16">16</button>
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="1">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox2">
+        <p>kernel_size1[0]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="2">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox3">
+        <p>kernel_size1[1]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="3">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox4">
+        <p>pool_size1</p>
+        <div class="choices">
+            <button class="choice" data-value="(1,1)">(1,1)</button>
+            <button class="choice" data-value="(2,2)">(2,2)</button>
+            <button class="choice" data-value="(3,3)">(3,3)</button>
+            <button class="choice" data-value="(4,4)">(4,4)</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="4">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox5">
+        <p>filters2:</p>
+        <div class="choices">
+            <button class="choice" data-value="8">8</button>
+            <button class="choice" data-value="16">16</button>
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="5">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox6">
+        <p>kernel_size2[0]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="6">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox7">
+        <p>kernel_size2[1]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="7">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox8">
+        <p>pool_size2</p>
+        <div class="choices">
+            <button class="choice" data-value="(1,1)">(1,1)</button>
+            <button class="choice" data-value="(2,2)">(2,2)</button>
+            <button class="choice" data-value="(3,3)">(3,3)</button>
+            <button class="choice" data-value="(4,4)">(4,4)</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="8">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox9">
+        <p>units1</p>
+        <form class="inputForm">
+            <input type="number" min="1" max="99" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">1 이상 99 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="9">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox10">
+        <p>activation1</p>
+        <div class="choices">
+            <button class="choice" data-value="sigmoid">sigmoid</button>
+            <button class="choice" data-value="tanh">tanh</button>
+            <button class="choice" data-value="relu">relu</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="10">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox11">
+        <p>units2</p>
+        <form class="inputForm">
+            <input type="number" min="1" max="20" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">1 이상 20 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="11">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox12">
+        <p>activation1</p>
+        <div class="choices">
+            <button class="choice" data-value="sgd">sgd</button>
+            <button class="choice" data-value="adam">adam</button>
+            <button class="choice" data-value="rmsprop">rmsprop</button>
+            <button class="choice" data-value="adagrad">adagrad</button>
+            <button class="choice" data-value="adadelta">adadelta</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="12">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox13">
+        <p>batch_size</p>
+        <div class="choices">
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice" data-value="256">256</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="13">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox14">
+        <p>epochs</p>
+        <form class="inputForm">
+            <input type="number" min="10" max="99" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">10 이상 99 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="14">도움말</button>
+    </div>
+
+    <div id="preSubmit" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Help Information</h2>
+            <form class="inputForm">
+                학번 <input type="text" />
+                <button type="submit" class="enter" data-box="-1">Enter</button>
+            </form>
+            <form class="inputForm">
+                이름 <input type="text" />
+                <button type="submit" class="enter" data-box="0">Enter</button>
+            </form>
+            <p style="color:gray;">잘못된 정보를 입력할 시 랭킹에서 제외될 수 있습니다.</p>
+            <div>
+                <button class="closeModal">Close</button>
+                <button id="final_submit">Submit</button>
+            </div>
+            <p id="paramAlert">(!)모든 하이퍼파라미터를 입력하세요</p>
+        </div>
+    </div>
+
+    <div id="modalOverlay0" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Help Information</h2>
+            <p class="para">This is some help content. You can describe any tips or important information here.</p>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <script src="dropdown.js"></script>
+</body>
+</html>

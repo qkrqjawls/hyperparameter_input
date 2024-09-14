@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets API 클라이언트</title>
+</head>
+<body>
+    <h1>Google Sheets 응답 제출</h1>
+    <button type="button" onclick="submitData()">제출</button>
+
+    <script>
+        function submitData() {
+
+            var data = {
+                arr:[1,3,2,4,6,5],
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycby2N3hAUvWpRi1dnCf0h7Ev-vw6JNl5lQm3tUFbcqm9y24F_d8KbPxHXf5RMv6lhKhX/exec', {
+                method: 'POST',
+                mode: 'no-cors',  // CORS 문제 해결을 위한 설정
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                console.log('Request sent.');
+                alert('응답이 성공적으로 제출되었습니다!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+    </script>
+</body>
+</html>
