@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperparameter</title>
+    <link rel="stylesheet" href="dropdown.css" />
+</head>
+<body bgcolor="black">
+    <div class="container-container">
+        <button id="global_submit">SUBMIT</button>
+        <button class="help-button" data-box="0" id="global_help">도움말</button>
+        <div class="image-container">
+            <img src="./code_sample_img.png" />
+            <!-- 박스들 -->
+            <div class="overlay1-box box" data-box="1">?</div>
+            <div class="overlay2-box box" data-box="2">?</div>
+            <div class="overlay3-box box" data-box="3">?</div>
+            <div class="overlay4-box box" data-box="4">?</div>
+            <div class="overlay5-box box" data-box="5">?</div>
+            <div class="overlay6-box box" data-box="6">?</div>
+            <div class="overlay7-box box" data-box="7">?</div>
+            <div class="overlay8-box box" data-box="8">?</div>
+            <div class="overlay9-box box" data-box="9">?</div>
+            <div class="overlay10-box box" data-box="10">?</div>
+            <div class="overlay11-box box" data-box="11">?</div>
+            <div class="overlay12-box box" data-box="12">?</div>
+            <div class="overlay13-box box" data-box="13">?</div>
+            <div class="overlay14-box box" data-box="14">?</div>
+        </div>
+    </div>
+
+    <!-- 설명과 선택지가 나타날 영역 -->
+    <div class="info-box" id="infoBox1">
+        <p>filters1:</p>
+        <div class="choices">
+            <button class="choice" data-value="8">8</button>
+            <button class="choice" data-value="16">16</button>
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="1">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox2">
+        <p>kernel_size1[0]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="2">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox3">
+        <p>kernel_size1[1]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="3">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox4">
+        <p>pool_size1</p>
+        <div class="choices">
+            <button class="choice" data-value="(1,1)">(1,1)</button>
+            <button class="choice" data-value="(2,2)">(2,2)</button>
+            <button class="choice" data-value="(3,3)">(3,3)</button>
+            <button class="choice" data-value="(4,4)">(4,4)</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="4">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox5">
+        <p>filters2:</p>
+        <div class="choices">
+            <button class="choice" data-value="8">8</button>
+            <button class="choice" data-value="16">16</button>
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="5">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox6">
+        <p>kernel_size2[0]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="6">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox7">
+        <p>kernel_size2[1]:</p>
+        <div class="choices">
+            <button class="choice" data-value="2">2</button>
+            <button class="choice" data-value="3">3</button>
+            <button class="choice" data-value="4">4</button>
+            <button class="choice" data-value="5">5</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="7">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox8">
+        <p>pool_size2</p>
+        <div class="choices">
+            <button class="choice" data-value="(1,1)">(1,1)</button>
+            <button class="choice" data-value="(2,2)">(2,2)</button>
+            <button class="choice" data-value="(3,3)">(3,3)</button>
+            <button class="choice" data-value="(4,4)">(4,4)</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="8">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox9">
+        <p>units1</p>
+        <form class="inputForm">
+            <input type="number" min="1" max="99" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">1 이상 99 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="9">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox10">
+        <p>activation1</p>
+        <div class="choices">
+            <button class="choice" data-value="sigmoid">sigmoid</button>
+            <button class="choice" data-value="tanh">tanh</button>
+            <button class="choice" data-value="relu">relu</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="10">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox11">
+        <p>units2</p>
+        <form class="inputForm">
+            <input type="number" min="1" max="20" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">1 이상 20 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="11">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox12">
+        <p>optimizer</p>
+        <div class="choices">
+            <button class="choice" data-value="sgd">sgd</button>
+            <button class="choice" data-value="adam">adam</button>
+            <button class="choice" data-value="rmsprop">rmsprop</button>
+            <button class="choice" data-value="adagrad">adagrad</button>
+            <button class="choice" data-value="adadelta">adadelta</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="12">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox13">
+        <p>batch_size</p>
+        <div class="choices">
+            <button class="choice" data-value="32">32</button>
+            <button class="choice" data-value="64">64</button>
+            <button class="choice" data-value="128">128</button>
+            <button class="choice" data-value="256">256</button>
+            <button class="choice quit" data-value="quit">X</button>
+        </div>
+        <button class="help-button" data-box="13">도움말</button>
+    </div>
+    <div class="info-box" id="infoBox14">
+        <p>epochs</p>
+        <form class="inputForm">
+            <input type="number" min="10" max="99" />
+            <button type="submit" class="submit">submit</button>
+        </form>
+        <p class="message">10 이상 99 이하의 정수를 입력해 주세요</p>
+        <button class="choices choice quit" data-value="quit">X</button>
+        <button class="help-button" data-box="14">도움말</button>
+    </div>
+
+    <div id="preSubmit" class="modal-overlay">
+        <div class="modal-content">
+            <h2>SUBMIT</h2>
+            <form class="inputForm">
+                학번 <input type="text" />
+                <button type="submit" class="enter" data-box="-1">Enter</button>
+            </form>
+            <form class="inputForm">
+                이름 <input type="text" />
+                <button type="submit" class="enter" data-box="0">Enter</button>
+            </form>
+            <p style="color:gray;">잘못된 정보를 입력할 시 랭킹에서 제외될 수 있습니다.</p>
+            <div>
+                <button class="closeModal">Close</button>
+                <button id="final_submit">Submit</button>
+            </div>
+            <p id="paramAlert">(!)모든 하이퍼파라미터를 입력하세요</p>
+        </div>
+    </div>
+
+    <div id="modalOverlay0" class="modal-overlay">
+        <div class="modal-content">
+            <h2>하이퍼파라미터 : 나도 인공지능 개발자!</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn.png" />
+                <div class="para">
+                    <p>당신의 목표는 0~9 아라비아 숫자 손글씨 이미지를 보고 어떤 숫자인지 맞히는 AI 모델을 만드는 것입니다. AI는 60000개의 손글씨 데이터를 반복적으로 학습할 것이고, 당신은 AI 모델이 학습을 효과적으로 하도록 만들기 위해 '하이퍼파라미터'를 조절해야 합니다.</p>
+                    <p>하이퍼파라미터는 모델이 학습을 통해 최적화하기 힘든 형태의 매개변수를 말하며(미분 불가능 등의 이유), 이런 하이퍼파라미터를 개발자가 직접 바꿔가며 AI가 학습을 더 잘 할 수 있도록 만드는 일을 '하이퍼파라미터 튜닝(Hyperparameter tuning)' 이라고 합니다.</p>
+                    <p>하이퍼파라미터 튜닝은 학습 과정에서 어떤 내용을 보느냐가 아닌 학습의 초기 방향성 자체를 좌우하는 것이므로 이것이 틀어졌을 때 수만 개의 데이터를 배운 뒤의 결과는 천차만별입니다.</p>
+                    <p>손글씨 인식을 위해 두 개의 합성곱 레이어와 두 개의 완전 연결 레이어로 구성된 CNN 모델의 하이퍼파라미터를 조절하여 최고 정확도의 모델을 자랑하는 SASA 최고의 인공지능 개발자가 되어보세요!</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+    <div id="modalOverlay1" class="modal-overlay">
+        <div class="modal-content">
+            <h2>filters : 필터의 수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_filter.png" />
+                <div class="para">
+                    <p>필터는 합성곱을 통해 이미지에서 특정 특징(예: 가장자리, 질감 등)을 추출하는 장치입니다.</p>
+                    <p>각 필터는 서로 다른 특징을 학습합니다. 필터의 수는 한 층에서 학습할 특징의 다양성을 결정하며, 필터가 많을수록 더 많은 정보를 학습할 수 있습니다.</p>
+                    <p>하지만 필터 수가 많아지면 모델의 파라미터 수도 증가하여 더 많은 계산 자원이 필요하고, 과적합(overfitting)의 위험이 증가할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay2" class="modal-overlay">
+        <div class="modal-content">
+            <h2>kernel_size : 커널 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_convd.png" style="width:50%;" />
+                <div class="para">
+                    <p>필터의 크기를 의미하는 파라미터입니다.</p>
+                    <p>필터 크기가 클수록 더 넓은 영역에서 특징을 추출할 수 있지만, 연산량이 증가하고 더 추상적인 정보를 학습하게 됩니다. 반대로 작은 필터 크기는 더 미세한 특징을 포착하며, 연산량이 줄어듭니다.</p>
+                    <p>반복해서 너무 큰 필터로 합성곱을 진행할 시 차원 축소가 너무 크게 일어나 오류가 발생할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay3" class="modal-overlay">
+        <div class="modal-content">
+            <h2>kernel_size : 커널 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_convd.png" style="width:50%;" />
+                <div class="para">
+                    <p>필터의 크기를 의미하는 파라미터입니다.</p>
+                    <p>필터 크기가 클수록 더 넓은 영역에서 특징을 추출할 수 있지만, 연산량이 증가하고 더 추상적인 정보를 학습하게 됩니다. 반대로 작은 필터 크기는 더 미세한 특징을 포착하며, 연산량이 줄어듭니다.</p>
+                    <p>반복해서 너무 큰 필터로 합성곱을 진행할 시 차원 축소가 너무 크게 일어나 오류가 발생할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay4" class="modal-overlay">
+        <div class="modal-content">
+            <h2>pool_size : 풀링 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/max_pooling.jpg" style="width:50%" />
+                <div class="para">
+                    <p>Max Pooling은 특정 영역에서 가장 큰 값만을 추출하는 과정입니다.</p>
+                    <p>이 과정을 통해 중요한 특징만 남기고 공간 크기를 줄이며, 이는 연산량을 줄이고 과적합을 방지하는 데 도움이 됩니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay5" class="modal-overlay">
+        <div class="modal-content">
+            <h2>filters : 필터의 수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_filter.png" />
+                <div class="para">
+                    <p>필터는 이미지에서 특정 특징(예: 가장자리, 질감 등)을 추출하기 위한 장치입니다.</p>
+                    <p>각 필터는 서로 다른 특징을 학습합니다. 필터의 수는 한 층에서 학습할 특징의 다양성을 결정하며, 필터가 많을수록 더 많은 정보를 학습할 수 있습니다.</p>
+                    <p>하지만 필터 수가 많아지면 모델의 파라미터 수도 증가하여 더 많은 계산 자원이 필요하고, 과적합(overfitting)의 위험이 증가할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay6" class="modal-overlay">
+        <div class="modal-content">
+            <h2>kernel_size : 커널 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_convd.png" style="width:50%;" />
+                <div class="para">
+                    <p>필터의 크기를 의미하는 파라미터입니다.</p>
+                    <p>필터 크기가 클수록 더 넓은 영역에서 특징을 추출할 수 있지만, 연산량이 증가하고 더 추상적인 정보를 학습하게 됩니다. 반대로 작은 필터 크기는 더 미세한 특징을 포착하며, 연산량이 줄어듭니다.</p>
+                    <p>반복해서 너무 큰 필터로 합성곱을 진행할 시 차원 축소가 너무 크게 일어나 오류가 발생할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay7" class="modal-overlay">
+        <div class="modal-content">
+            <h2>kernel_size : 커널 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/cnn_convd.png" style="width:50%;" />
+                <div class="para">
+                    <p>필터의 크기를 의미하는 파라미터입니다.</p>
+                    <p>필터 크기가 클수록 더 넓은 영역에서 특징을 추출할 수 있지만, 연산량이 증가하고 더 추상적인 정보를 학습하게 됩니다. 반대로 작은 필터 크기는 더 미세한 특징을 포착하며, 연산량이 줄어듭니다.</p>
+                    <p>반복해서 너무 큰 필터로 합성곱을 진행할 시 차원 축소가 너무 크게 일어나 오류가 발생할 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay8" class="modal-overlay">
+        <div class="modal-content">
+            <h2>pool_size : 풀링 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/max_pooling.jpg" style="width:50%" />
+                <div class="para">
+                    <p>Max Pooling은 특정 영역에서 가장 큰 값만을 추출하는 과정입니다.</p>
+                    <p>이 과정을 통해 중요한 특징만 남기고 공간 크기를 줄이며, 이는 연산량을 줄이고 과적합을 방지하는 데 도움이 됩니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay9" class="modal-overlay">
+        <div class="modal-content">
+            <h2>units(dense layer) : 전결합층의 뉴런 수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/fully_connected_layer.jpg" />
+                <div class="para">
+                    <p>전결합층(fully-connected layer)의 뉴런 수는 신경망의 성능과 효율성에 큰 영향을 미칩니다. 뉴런 수는 각 층에서 입력을 처리하고 다음 층으로 전달할 특징 벡터의 크기를 결정하는 중요한 하이퍼파라미터입니다. 전결합층은 보통 네트워크의 뒷부분에 위치하여, 앞에서 추출된 특징을 기반으로 최종 출력에 이르게 됩니다.</p>
+                    <p>뉴런의 수가 너무 많으면 과대적합과 연산 무게의 문제가, 너무 적으면 과소적합과 치명적인 성능 저하 문제가 발생할 수 있습니다.</p>
+                    <p>특히나, 분류 모델에서 출력층(그림의 softmax layer)의 뉴런 수는 아주 중요한 의미를 가집니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay10" class="modal-overlay">
+        <div class="modal-content">
+            <h2>activation : 활성화 함수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/activation.png" />
+                <div class="para">
+                    <p>활성화 함수(Activation Function)*는 인공 신경망에서 뉴런의 출력을 비선형 변환하는 중요한 요소입니다. 신경망이 복잡한 패턴을 학습하고 비선형성을 표현할 수 있도록 해주며, 이를 통해 단순 선형 모델보다 훨씬 복잡한 문제를 해결할 수 있습니다. 활성화 함수의 선택은 모델의 성능과 학습 속도에 큰 영향을 미칩니다.</p>
+                    <p>활성화 함수는 신경망에서 비선형성을 추가해 모델이 복잡한 패턴을 학습할 수 있도록 도와줍니다. 대표적인 활성화 함수로는 Sigmoid, Tanh, ReLU가 있습니다. Sigmoid 함수는 출력을 0과 1 사이로 제한하며, 이진 분류 문제에서 자주 사용되지만, 기울기 소실 문제로 인해 깊은 네트워크에서는 학습이 어려울 수 있습니다. Tanh 함수는 Sigmoid와 비슷하지만, 출력이 -1에서 1 사이로 제한되고 중심이 0에 있어, 더 강력한 출력 표현이 가능합니다. 그러나 Tanh 역시 기울기 소실 문제가 발생할 수 있습니다. ReLU 함수는 입력이 0보다 작으면 0, 크면 그 값을 그대로 출력하며, 계산이 빠르고 기울기 소실 문제가 적어 딥러닝에서 널리 사용됩니다. 다만, 음수 입력에 대해 학습이 멈추는 '죽은 ReLU 문제'가 발생할 수 있습니다.</p>
+                    <p>활성화 함수는 모델의 학습 속도와 성능을 좌우하므로, 문제 유형에 맞게 적절히 선택해야 합니다. ReLU는 대부분의 딥러닝 모델에서 기본 선택으로 좋으며, Sigmoid나 Tanh는 이진 분류나 출력 값에 제한이 필요한 경우에 사용될 수 있습니다. 모델의 특성에 맞는 활성화 함수를 선택하는 것이 모델의 성공에 중요한 요소입니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay9" class="modal-overlay">
+        <div class="modal-content">
+            <h2>units(dense layer) : 전결합층의 뉴런 수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/fully_connected_layer.jpg" />
+                <div class="para">
+                    <p>전결합층(fully-connected layer)의 뉴런 수는 신경망의 성능과 효율성에 큰 영향을 미칩니다. 뉴런 수는 각 층에서 입력을 처리하고 다음 층으로 전달할 특징 벡터의 크기를 결정하는 중요한 하이퍼파라미터입니다. 전결합층은 보통 네트워크의 뒷부분에 위치하여, 앞에서 추출된 특징을 기반으로 최종 출력에 이르게 됩니다.</p>
+                    <p>뉴런의 수가 너무 많으면 과대적합과 연산 무게의 문제가, 너무 적으면 과소적합과 치명적인 성능 저하 문제가 발생할 수 있습니다.</p>
+                    <p>특히나, 분류 모델에서 출력층(그림의 softmax layer)의 뉴런 수는 아주 중요한 의미를 가집니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay12" class="modal-overlay">
+        <div class="modal-content">
+            <h2>optimizer : 최적화 알고리즘</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <img src="./imgs/optimizer.jpg" />
+                <div class="para">
+                    <p>최적화 알고리즘은 신경망 모델 학습에 필수적인 역할을 하며, 모델이 효율적으로 학습하고 데이터로부터 패턴을 잘 학습하도록 돕습니다. 이 과정에서 손실 함수의 최소화를 달성하는 것이 주 목표이며, 이를 통해 모델의 예측 정확도와 성능을 극대화할 수 있습니다.</p>
+                    <p>최적화 알고리즘의 선택은 모델의 성능에 직접적인 영향을 미치므로 매우 중요합니다. 효율적인 알고리즘은 학습 시간을 단축시키고, 더 나은 결과를 빠르게 도출해낼 수 있습니다. 반면, 부적절한 알고리즘 선택은 학습이 느리거나 과적합, 미흡한 수렴 등의 문제를 야기할 수 있습니다.</p>
+                    <p>특히 딥러닝 모델의 경우, 데이터의 크기와 복잡도가 크므로 최적화 알고리즘의 선택은 더욱 중요하며, 실험을 통해 다양한 알고리즘을 비교하고 최적의 설정을 찾는 것이 권장됩니다. 이러한 과정은 모델을 실제 환경에 적용하기 전에 반드시 검토해야 할 항목입니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay13" class="modal-overlay">
+        <div class="modal-content">
+            <h2>batch_size : 배치 크기</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <div class="para">
+                    <p>배치 크기(Batch Size)는 한 번의 학습 업데이트에서 사용하는 데이터 샘플의 수를 의미합니다. 작은 배치 크기는 메모리 효율적이고 빠른 업데이트가 가능하지만, 불안정한 경사 하강을 유발할 수 있습니다. 반면, 큰 배치 크기는 학습이 안정적이지만, 메모리 사용량이 많고 학습 속도가 느려질 수 있습니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+
+    <div id="modalOverlay14" class="modal-overlay">
+        <div class="modal-content">
+            <h2>epochs : 에포크 수</h2>
+            <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
+            <div class="modal-para">
+                <div class="para">
+                    <p>에포크 수(Epochs)는 모델이 전체 훈련 데이터를 모두 한 번 학습하는 과정을 의미합니다. 에포크 수가 너무 적으면 충분히 학습되지 않아 성능이 낮아지고, 너무 많으면 과적합이 발생할 수 있습니다. 적절한 에포크 수는 실험을 통해 결정됩니다.</p>
+                </div>
+            </div>
+            <button class="closeModal">Close</button>
+        </div>
+    </div>
+
+    <script src="dropdown.js"></script>
+</body>
+</html>
