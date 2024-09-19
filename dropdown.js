@@ -23,6 +23,8 @@ choiceButtons.forEach(button => {
         const selectedValue = this.getAttribute('data-value');
         if (currentBox && selectedValue!="quit") {
             currentBox.textContent = selectedValue; // 선택한 박스에 선택한 값 표시
+            console.log(currentBox.classList);
+            currentBox.classList.add("choice");
             params[parseInt(currentBox.getAttribute('data-box'),10)+2] = selectedValue;
         }
         hideAllInfoBoxes(); // 설명창 다시 숨기기
@@ -41,6 +43,7 @@ submitButtons.forEach(button => {
 
         if(min <= inputValue && inputValue <= max && currentBox) {
             currentBox.textContent = inputValue
+            currentBox.classList.add("choice");
             params[parseInt(currentBox.getAttribute('data-box'),10)+2] = inputValue;
             hideAllInfoBoxes();
         }

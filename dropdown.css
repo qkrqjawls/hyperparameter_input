@@ -10,6 +10,10 @@
 html body {
     text-align: center;
 }
+body input {
+    background-color: #000;
+    color: #00ff00;
+}
 .container-container {
     width: 99%;
     position: absolute;
@@ -46,6 +50,10 @@ html body {
     display: block;
     font-size: 14px;
 }
+.choice {
+    background-color: #000;
+    color: #00ff00;
+}
 body button {
     margin-right: 10px;
     padding: 10px;
@@ -69,7 +77,6 @@ body button {
     top: calc(0.442529 * 100%);
     width: calc(0.017578 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay2-box {
@@ -78,7 +85,6 @@ body button {
     top: calc(0.442529 * 100%);
     width: calc(0.008789 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay3-box {
@@ -87,7 +93,6 @@ body button {
     top: calc(0.442529 * 100%);
     width: calc(0.008789 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay4-box {
@@ -96,7 +101,6 @@ body button {
     top: calc(0.462988 * 100%);
     width: calc(0.043945 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay5-box {
@@ -105,7 +109,6 @@ body button {
     top: calc(0.484547 * 100%);
     width: calc(0.017578 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay6-box {
@@ -114,7 +117,6 @@ body button {
     top: calc(0.484547 * 100%);
     width: calc(0.008789 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay7-box {
@@ -123,7 +125,6 @@ body button {
     top: calc(0.484547 * 100%);
     width: calc(0.008789 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay8-box {
@@ -132,7 +133,6 @@ body button {
     top: calc(0.505119 * 100%);
     width: calc(0.043945 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay9-box {
@@ -141,7 +141,6 @@ body button {
     top: calc(0.547266 * 100%);
     width: calc(0.017578 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay10-box {
@@ -150,7 +149,6 @@ body button {
     top: calc(0.547266 * 100%);
     width: calc(0.061537 * 100%);
     height: calc(0.020134 * 100%);
-    background-color: #fff;
 }
 
 .overlay11-box {
@@ -159,7 +157,6 @@ body button {
     top: calc(0.572405 * 100%);
     width: calc(0.017578 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay12-box {
@@ -168,7 +165,6 @@ body button {
     top: calc(0.635432 * 100%);
     width: calc(0.026367*2.7 * 100%);
     height: calc(0.020571 * 100%);
-    background-color: #fff;
 }
 
 .overlay13-box {
@@ -177,7 +173,6 @@ body button {
     top: calc(0.761614 * 100%);
     width: calc(0.026367 * 100%);
     height: calc(0.022191 * 100%);
-    background-color: #fff;
 }
 
 .overlay14-box {
@@ -186,7 +181,6 @@ body button {
     top: calc(0.782185 * 100%);
     width: calc(0.015336 * 100%);
     height: calc(0.020134 * 100%);
-    background-color: #fff;
 }
 /* 기본적으로 모달과 오버레이는 숨김 상태 */
 .modal-overlay {
