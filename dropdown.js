@@ -87,7 +87,7 @@ function contain_empty(arr){
     for(i=0; i<=16; i++) if(!arr[i]) return true;
     return false;
 }
-
+const afterSubmit = document.getElementById('afterSubmit')
 function submitData(arr) {
     var data = {
         arr: arr,
@@ -102,10 +102,11 @@ function submitData(arr) {
     })
     .then(() => {
         console.log('Request sent.');
-        alert('응답이 성공적으로 제출되었습니다!');
+        afterSubmit.classList.add('active');
     })
     .catch(error => {
         console.error('Error:', error);
+        alert('예기치 못한 오류가 발생하여 응답 제출에 실패했습니다.')
     });
 }
 const global_submit = document.getElementById('global_submit');
@@ -122,6 +123,6 @@ final_submit.addEventListener('click', event => {
     else{
         submitData(params);
         paramAlert.style.color = '#202020';
-        event.target.closest('.modal-overlay').remove('active');
+        event.target.closest('.modal-overlay').classList.remove('active');
     }
 });
