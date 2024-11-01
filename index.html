@@ -11,7 +11,7 @@
         <button id="global_submit">SUBMIT</button>
         <button class="help-button" data-box="0" id="global_help">도움말</button>
         <div class="image-container">
-            <img src="./code_sample_img.png" />
+            <img src="./imgs/code_sample_img.png" />
             <!-- 박스들 -->
             <div class="overlay1-box box" data-box="1">?</div>
             <div class="overlay2-box box" data-box="2">?</div>
@@ -197,6 +197,8 @@
                 <button type="submit" class="enter" data-box="0">Enter</button>
             </form>
             <p style="color:gray;">잘못된 정보를 입력할 시 랭킹에서 제외될 수 있습니다.</p>
+            <p style="color:gray;">학번, 이름 입력 후에는 키보드의 Enter 키 또는 우측의 Enter 버튼을 눌러주세요.</p>
+            <img src="./imgs/logo.jpg" style="width: 40%;"/>
             <div>
                 <button class="closeModal">Close</button>
                 <button id="final_submit">Submit</button>
@@ -205,7 +207,7 @@
         </div>
     </div>
 
-    <div id="modalOverlay0" class="modal-overlay">
+    <div id="modalOverlay0" class="modal-overlay active">
         <div class="modal-content">
             <h2>하이퍼파라미터 : 나도 인공지능 개발자!</h2>
             <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
@@ -389,7 +391,7 @@
     </div>
 
 
-    <div id="modalOverlay9" class="modal-overlay">
+    <div id="modalOverlay11" class="modal-overlay">
         <div class="modal-content">
             <h2>units(dense layer) : 전결합층의 뉴런 수</h2>
             <p style="text-align: center; color: white; font-size: 11px;">(scroll down)</p>
@@ -445,7 +447,7 @@
             <div class="modal-para">
                 <img src="./imgs/iteration.png" />
                 <div class="para">
-                    <p>에포크 수(Epochs)는 모델이 전체 훈련 데이터를 모두 한 번 학습하는 과정을 의미합니다. 에포크 수가 너무 적으면 충분히 학습되지 않아 성능이 낮아지고, 너무 많으면 과적합이 발생할 수 있습니다. 적절한 에포크 수는 실험을 통해 결정됩니다.</p>
+                    <p>에포크는 모델이 전체 훈련 데이터를 모두 한 번 학습하는 과정을 의미합니다. 따라서 에포크 수가 의미하는 것은 모델이 전체 데이터셋을 학습하는 횟수입니다. 에포크 수가 너무 적으면 학습이 충분하지 않아 성능이 낮아지고, 너무 많으면 과적합 문제가 발생할 수 있습니다. 적절한 에포크 수는 보통 실험을 통해 결정됩니다.</p>
                 </div>
             </div>
             <button class="closeModal">Close</button>
@@ -456,12 +458,13 @@
         <div class="modal-content">
             <h2>응답이 성공적으로 제출되었습니다!</h2>
             <div class="modal-para">
-                <p>실행이 완료되기까지는 2~4분의 시간이 소요됩니다.</p>
-                <p>아래 QR코드에서 대기열과 실행 정보를 볼 수 있고, 스크린에서 각 실행 현황을 볼 수 있습니다.</p>
-                <img src="./result_qrcode.png" style="width: 50%;" />
+                <p>실행이 완료되기까지는 약 2~4분의 시간이 소요됩니다.</p>
+                <p>아래 QR코드에서 점수, 대기열, 실행 정보를 볼 수 있고, 스크린에서 각 실행 현황을 볼 수 있습니다.</p>
+                <img src="./imgs/result_qrcode.png" style="width: 50%;" />
                 <p>스크린에서 자신의 실행 현황을 확인하거나 다른 부스를 체험하면서 기다려보세요!</p>
                 <p style="color:gray;">(새로운 응답을 제출하려면 새로고침하세요)</p>
             </div>
+            <button onClick="window.location.reload()" style="position:absolute; bottom:2%; margin-left: auto; margin-right: auto;">새로고침</button>
         </div>
     </div>
 
